@@ -1,10 +1,13 @@
-# 冒泡
+<?php
 
-# 冒泡排序
+$data = [];
+$index = 0;
+while($index++ < 100){
+    $data[] = rand(1,100);
+}
 
-冒泡排序是的思路是数据两两比较，将大的或者小的交换位置。
-
-```php
+echo json_encode($data) . PHP_EOL;
+$length = count($data);
 for($i = 1; $i < $length;$i++){
     for($j = 0; $j < $length - $i;$j++){
         if($data[$j] > $data[$j+1]){
@@ -14,4 +17,4 @@ for($i = 1; $i < $length;$i++){
         }
     }
 }
-```
+echo json_encode($data) . PHP_EOL;

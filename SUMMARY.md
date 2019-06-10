@@ -1,6 +1,6 @@
-# Summary
+# 目录
 
-* [Introduction](README.md)
+* [介绍](README.md)
 * [排序](sort/README.md)
     * [冒泡](sort/bubble.md)
 
