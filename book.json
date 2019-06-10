@@ -1,0 +1,22 @@
+{
+  "title": "算法笔记",
+  "author": "Alan-Fu <ssisoo@live.cn>",
+  "description": "算法笔记",
+  "language": "en",
+  "output":"docs",
+  "plugins": [
+    "page-toc",
+    "expandable-chapters-small",
+    "-sharing"
+  ],
+  "pluginsConfig": {
+    "page-toc": {
+      "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
+      "position": "before-first",
+      "showByDefault": true
+    }
+  },
+  "styles": {
+    "website": "styles/website.css"
+  }
+}

@@ -1,0 +1,7 @@
+.gitbook-link {
+    display: none !important;
+}
+
+.page-toc:before{
+  content: "目录" !important;
+}
