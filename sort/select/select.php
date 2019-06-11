@@ -8,18 +8,19 @@ while($index++ < 100){
 echo json_encode($data) . PHP_EOL;
 
 $length = count($data);
-for($i = 0;$i < $length;$i++){
+for($i = 0;$i < $length - 1;$i++){
     $tmpIndex = $i;
-    for($j = $i+1;$j < $length; $j++){
-        if($data[$i] > $data[$j]){
+    $tmpVal = $data[$i];
+    for($j = $i;$j < $length; $j++){
+        if($tmpVal > $data[$j]){
+            $tmpVal = $data[$j];
             $tmpIndex = $j;
         }
     }
 
     if($tmpIndex != $i){
-        $tmp = $data[$tmpIndex];
         $data[$tmpIndex] = $data[$i];
-        $data[$i]  = $tmp;
+        $data[$i]  = $tmpVal;
     }
 }
 echo json_encode($data) . PHP_EOL;
