@@ -7,7 +7,9 @@
   "plugins": [
     "page-toc",
     "expandable-chapters-small",
-    "-sharing"
+    "-sharing",
+    "highlight",
+    "api"
   ],
   "pluginsConfig": {
     "page-toc": {
