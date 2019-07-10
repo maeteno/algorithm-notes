@@ -5,4 +5,5 @@
     * [冒泡排序](sort/bubble.md)
     * [选择排序](sort/select.md)
     * [插入排序](sort/insert.md)
+    * [归并排序](sort/merge.md)
 

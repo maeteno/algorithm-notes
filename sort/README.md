@@ -9,7 +9,7 @@
 | 冒泡排序 | O(n<sup>2</sup>) | O(n<sup>2</sup>)   | O(n)               | O(1)       | 稳定   |
 | 选择排序 | O(n<sup>2</sup>) | O(n<sup>2</sup>)   | O(n<sup>2</sup>)   | O(1)       | 稳定   |
 | 插入排序 | O(n<sup>2</sup>) | O(n<sup>2</sup>)   | O(n)               | O(1)       | 稳定   |
-
+| 归并排序 | O(nlogn)         | O(nlogn)           | O(nlogn)           | O(nlogn)   | 稳定   |
 
 # 资料
 - <https://www.cnblogs.com/onepixel/p/7674659.html>
