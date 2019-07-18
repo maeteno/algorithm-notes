@@ -5,6 +5,6 @@
 #include "sort/bubble.h"
 
 int main() {
-    auto bubble = new Bubble<int>(1);
+    auto bubble = new Bubble(1);
     bubble->Print();
 }

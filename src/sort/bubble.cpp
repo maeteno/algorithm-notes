@@ -7,16 +7,16 @@
 
 using namespace std;
 
-template<typename T>
-Bubble<T>::Bubble() {}
 
-template<typename T>
-Bubble<T>::Bubble(T data) {
+class Bubble;
+
+Bubble::Bubble() {}
+
+Bubble::Bubble(int data) {
     this->data = data;
 }
 
-template<typename T>
-void Bubble<T>::Print() {
+void Bubble::Print() {
     cout << "print 12134123" << endl;
 }
 

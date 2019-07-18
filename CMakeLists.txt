@@ -12,13 +12,12 @@ SET(CMAKE_CXX_STANDARD 11)
 
 # 查找当前目录下的所有源文件
 # 并将名称保存到 DIR_SRCS 变量
-aux_source_directory(./src DIR_SRCS)
+AUX_SOURCE_DIRECTORY(./src DIR_SRCS)
 
 # 添加 math 子目录
-add_subdirectory(src/sort)
+ADD_SUBDIRECTORY(src/sort)
 
 # 指定生成目标
-add_executable(Demo src/main.cpp)
-
+ADD_EXECUTABLE(Main src/main.cpp)
 # 添加链接库
-target_link_libraries(Demo Bubble)
+TARGET_LINK_LIBRARIES(Main Bubble)
