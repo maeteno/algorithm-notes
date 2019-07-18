@@ -16,5 +16,7 @@ CMakeFiles
 *.sln
 *.a
 CMakeCache.txt
+*.cbp
 
-Main
+sort
+

@@ -18,7 +18,7 @@ AUX_SOURCE_DIRECTORY(./src DIR_SRCS)
 ADD_SUBDIRECTORY(src/sort)
 
 # 指定生成目标
-ADD_EXECUTABLE(Main src/main.cpp)
+ADD_EXECUTABLE(sort src/sort.cpp)
 
 # 添加链接库
-TARGET_LINK_LIBRARIES(Main Bubble)
+TARGET_LINK_LIBRARIES(sort Bubble)

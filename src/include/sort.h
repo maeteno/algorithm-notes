@@ -7,6 +7,8 @@
 
 namespace sort {
     void bubble(int [], int);
+
+    void select(int [], int);
 }
 
 #endif //ALGRITHM_NOTES_SORT_H
