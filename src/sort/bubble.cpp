@@ -1,26 +1,11 @@
-//
-// Created by ssiso on 2019/7/16.
-//
-
-#include "bubble.h"
+#include "../include/sort.h"
 #include <iostream>
 
 using namespace std;
 
+void sort::bubble(int data[], int len) {
 
-class Bubble;
-
-Bubble::Bubble() {}
-
-Bubble::Bubble(int data) {
-    this->data = data;
+    for (int i = 0; i < len; i++) {
+        cout << data[i] << endl;
+    }
 }
-
-void Bubble::Print() {
-    cout << "print 12134123" << endl;
-}
-
-//int main(){
-//    auto bubble = new sort::Bubble<int>(1);
-//    bubble->Print();
-//}

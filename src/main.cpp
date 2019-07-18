@@ -1,10 +1,12 @@
-//
-// Created by ssiso on 2019/7/17.
-//
+#include <iostream>
+#include "include/sort.h"
 
-#include "sort/bubble.h"
+using namespace std;
 
 int main() {
-    auto bubble = new Bubble(1);
-    bubble->Print();
+    int a[] = {1, 2, 3, 4, 5, 67, 34, 6432, 543, 1213};
+
+    int len = sizeof(a) / sizeof(a[0]);
+    cout << len << endl;
+    sort::bubble(a, 10);
 }

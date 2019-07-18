@@ -14,10 +14,11 @@ SET(CMAKE_CXX_STANDARD 11)
 # 并将名称保存到 DIR_SRCS 变量
 AUX_SOURCE_DIRECTORY(./src DIR_SRCS)
 
-# 添加 math 子目录
+# 添加子目录
 ADD_SUBDIRECTORY(src/sort)
 
 # 指定生成目标
 ADD_EXECUTABLE(Main src/main.cpp)
+
 # 添加链接库
 TARGET_LINK_LIBRARIES(Main Bubble)
