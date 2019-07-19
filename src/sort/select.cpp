@@ -8,6 +8,6 @@ using namespace std;
 
 void sort::select(int data[], int len) {
     for (int i = 0; i < len; i++) {
-        cout << data[i] << endl;
+
     }
 }

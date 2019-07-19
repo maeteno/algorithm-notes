@@ -1,19 +1,22 @@
 #include <iostream>
 #include "include/sort.h"
+#include "include/tools.h"
 
 using namespace std;
 
 int main() {
-    int a[] = {13, 23, 3, 4, 52, 67, 34, 62, 43, 123};
-    int b[] = {13, 23, 3, 4, 52, 67, 34, 62, 43, 123};
+    int len = 10;
+    int *a = randArray(len);
+    int *b = copyArray(a, len);
 
-    sort::bubble(a, 10);
+    cout << "RawData:\t";
+    printArray(a, len);
 
-    for (int i : a) {
-        cout << i << "\t";
-    }
+    sort::bubble(a, len);
+    cout << "Bubble:\t";
+    printArray(a, len);
 
-    cout << endl;
-
-    sort::select(b, 10);
+    sort::select(b, len);
+    cout << "Select:\t";
+    printArray(b, len);
 }

@@ -16,9 +16,10 @@ AUX_SOURCE_DIRECTORY(./src DIR_SRCS)
 
 # 添加子目录
 ADD_SUBDIRECTORY(src/sort)
+ADD_SUBDIRECTORY(src/tools)
 
 # 指定生成目标
 ADD_EXECUTABLE(sort src/sort.cpp)
 
 # 添加链接库
-TARGET_LINK_LIBRARIES(sort Bubble)
+TARGET_LINK_LIBRARIES(sort Bubble Tools)

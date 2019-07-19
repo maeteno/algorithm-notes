@@ -14,9 +14,11 @@ CMakeFiles
 *.filters
 .vs
 *.sln
+*.lib
 *.a
 CMakeCache.txt
 *.cbp
 
 sort
-
+*.exe
+*.manifest
