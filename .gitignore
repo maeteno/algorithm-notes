@@ -19,6 +19,7 @@ CMakeFiles
 CMakeCache.txt
 *.cbp
 
-sort
 *.exe
 *.manifest
+
+./sort
