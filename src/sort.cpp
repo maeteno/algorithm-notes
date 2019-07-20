@@ -2,7 +2,7 @@
 #include "include/sort.h"
 #include "include/tools.h"
 
-#define LEN 10
+#define LEN 100
 
 using namespace std;
 
