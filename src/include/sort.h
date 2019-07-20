@@ -2,13 +2,19 @@
 #define ALGRITHM_NOTES_SORT_H
 
 namespace sort {
+
+    typedef struct {
+        int *data;
+        int len;
+    } Data;
+
     void bubble(int [], int);
 
     void select(int [], int);
 
     void insert(int [], int);
 
-    void merge(int [], int);
+    Data merge(Data);
 }
 
 #endif //ALGRITHM_NOTES_SORT_H
