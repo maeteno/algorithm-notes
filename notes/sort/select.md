@@ -11,21 +11,24 @@
 ![](../_images/select.gif)
 
 # 示例代码
-```php
-// PHP 代码
-for($i = 0;$i < $length - 1;$i++){
-    $tmpIndex = $i;
-    $tmpVal = $data[$i];
-    for($j = $i;$j < $length; $j++){
-        if($tmpVal > $data[$j]){
-            $tmpVal = $data[$j];
-            $tmpIndex = $j;
+```cpp
+// 选择排序
+void sort::select(int data[], int len) {
+    int tmp, index;
+    for (int i = 0; i < len - 1; i++) {
+        tmp = data[i];
+        index = i;
+        for (int j = i; j < len; ++j) {
+            if (data[j] < tmp) {
+                tmp = data[j];
+                index = j;
+            }
         }
-    }
 
-    if($tmpIndex != $i){
-        $data[$tmpIndex] = $data[$i];
-        $data[$i]  = $tmpVal;
+        if (index != i) {
+            data[index] = data[i];
+            data[i] = tmp;
+        }
     }
 }
 ```
