@@ -15,6 +15,8 @@ namespace sort {
     void insert(int [], int);
 
     Data merge(Data);
+
+    void quick(int *, int, int);
 }
 
 #endif //ALGRITHM_NOTES_SORT_H
