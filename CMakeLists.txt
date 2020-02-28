@@ -14,12 +14,15 @@ SET(CMAKE_CXX_STANDARD 11)
 # 并将名称保存到 DIR_SRCS 变量
 AUX_SOURCE_DIRECTORY(./src DIR_SRCS)
 
-# 添加子目录
-ADD_SUBDIRECTORY(src/sort)
+# Tools Lib
 ADD_SUBDIRECTORY(src/tools)
 
-# 指定生成目标
-ADD_EXECUTABLE(sort src/sort.cpp)
+# 排序
+ADD_SUBDIRECTORY(src/sort/lib) # 添加子目录
+ADD_EXECUTABLE(sort src/sort/main.cpp) # 指定生成目标
+TARGET_LINK_LIBRARIES(sort sort_lib tools_lib) # 添加链接库
 
-# 添加链接库
-TARGET_LINK_LIBRARIES(sort Bubble Tools)
+# Tree
+ADD_SUBDIRECTORY(src/tree/lib)
+ADD_EXECUTABLE(tree src/tree/main.cpp)
+TARGET_LINK_LIBRARIES(tree tree_lib tools_lib)

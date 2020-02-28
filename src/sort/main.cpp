@@ -1,6 +1,6 @@
 #include <iostream>
 #include "include/sort.h"
-#include "include/tools.h"
+#include "../include/tools.h"
 
 #define LEN 10
 

@@ -19,6 +19,8 @@ int partition(int *data, int len, int start) {
     for (int i = start + 1; i < end; ++i) {
 
     }
+
+    return 0;
 }
 
 

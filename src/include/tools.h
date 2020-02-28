@@ -1,7 +1,3 @@
-//
-// Created by ssiso on 2019/7/19.
-//
-
 #ifndef ALGRITHM_NOTES_TOOLS_H
 #define ALGRITHM_NOTES_TOOLS_H
 

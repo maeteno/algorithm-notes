@@ -1,6 +1,3 @@
-//
-// Created by ssiso on 2019/7/19.
-//
 #include <iostream>
 #include <time.h>
 #include "../include/tools.h"
