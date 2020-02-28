@@ -2,12 +2,11 @@
 #include "include/sort.h"
 #include "../include/tools.h"
 
-#define LEN 10
+#define LEN 7
 
 using namespace std;
 
 int main() {
-
     int *a = randArray(LEN);
     int *b = copyArray(a, LEN);
     int *c = copyArray(a, LEN);
