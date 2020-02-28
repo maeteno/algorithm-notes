@@ -6,3 +6,12 @@
     * [选择排序](notes/sort/select.md)
     * [插入排序](notes/sort/insert.md)
     * [归并排序](notes/sort/merge.md)
+* [搜索](notes/search/README.md)
+    * [二分查找](notes/search/bs.md)
+* [树](notes/tree/README.md)
+    * [最大堆](notes/tree/max-heap.md)
+    * [二叉搜索树](notes/tree/bst.md)
+    * [平衡二叉搜索树](notes/tree/avl.md)
+    * [B树](notes/tree/b-tree.md)
+    * [B+树](notes/tree/b-plus-tree.md)
+
