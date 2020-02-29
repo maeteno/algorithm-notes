@@ -2,9 +2,10 @@
 #include "include/sort.h"
 #include "../include/tools.h"
 
-#define LEN 7
+#define LEN 15
 
 using namespace std;
+using namespace sort;
 
 int main() {
     int *a = randArray(LEN);
@@ -15,22 +16,29 @@ int main() {
     cout << "Raw:\t";
     printArray(a, LEN);
 
-    sort::bubble(a, LEN);
+    bubble(a, LEN);
     cout << "Bubble:\t";
     printArray(a, LEN);
 
-    sort::select(b, LEN);
+    select(b, LEN);
     cout << "Select:\t";
     printArray(b, LEN);
 
-    sort::insert(c, LEN);
+    insert(c, LEN);
     cout << "Insert:\t";
     printArray(c, LEN);
 
-    sort::Data data;
+    Data data;
     data.data = d;
     data.len = LEN;
-    auto data2 = sort::merge(data);
+    auto data2 = merge(data);
     cout << "Merge:\t";
     printArray(data2.data, data2.len);
+
+    delete d;
+    delete c;
+    delete b;
+    delete a;
+
+    return  0;
 }

@@ -1,14 +1,25 @@
 #include <iostream>
 #include "include/bst.h"
 #include "include/max_heap.h"
+#include "../include/tools.h"
+
+#define LEN 10
 
 using namespace std;
 
 int main() {
-    BST<int, int> *bst = new BST<int, int>();
-    delete bst;
+    MaxHeap maxHeap(LEN);
+    int *a = randArray(LEN);
 
-    MaxHeap maxHeap(1);
+    for (int i = 0; i < LEN; i++) {
+        maxHeap.insert(a[i]);
+    }
 
-    cout << maxHeap.size() << endl;
+    maxHeap.print();
+
+    while (!maxHeap.isEmpty()){
+        cout << maxHeap.extractMax() << "\t";
+    }
+
+    cout << endl;
 }

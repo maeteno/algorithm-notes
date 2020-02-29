@@ -1,5 +1,5 @@
 #include <iostream>
-#include <time.h>
+#include <ctime>
 #include "../include/tools.h"
 
 using namespace std;
@@ -8,7 +8,7 @@ int *randArray(int count) {
     int *a = new int[count];
     srand((unsigned) time(nullptr));
     for (int i = 0; i < count; i++) {
-        a[i] = rand();
+        a[i] = rand() % 1000;
     }
 
     return a;

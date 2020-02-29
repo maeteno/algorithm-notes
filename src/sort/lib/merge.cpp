@@ -45,6 +45,7 @@ sort::Data _slice(const sort::Data data, int start, int end) {
     return newData;
 }
 
+// 数据重复时死循环
 sort::Data sort::merge(sort::Data data) {
     if (data.len < 2) {
         return data;

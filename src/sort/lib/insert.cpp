@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 void _insert(int data[], int from, int to) {
     int value = data[from];
 
@@ -22,7 +21,7 @@ void sort::insert(int data[], int len) {
 
         for (int j = i - 1; j >= 0; --j) {
             if (value < data[j]) {
-                if (0 == j) {
+                if (j == 0) {
                     _insert(data, i, j);
                     continue;
                 } else if (value >= data[j - 1]) {
