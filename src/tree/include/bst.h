@@ -27,16 +27,45 @@ private:
         }
     };
 
+    int count;
     Node *root;
 
 public:
     BST() {
+        root = NULL;
+        count = 0;
         cout << "BST" << endl;
     };
 
     ~BST() {
         cout << "~BST" << endl;
     };
+
+    int size() {
+        return count;
+    }
+
+    void insert(K key, V value) {
+        root = insert(root, key, value);
+    }
+
+private:
+    Node *insert(Node *node, K key, V value) {
+        if (node == NULL) {
+            count++;
+            return new Node(key, value);
+        }
+
+        if (key == node->key) {
+            node->value = value;
+        } else if (key < node->key) {
+            node->left = insert(node->left, key, value);
+        } else {
+            node->right = insert(node->right, key, value);
+        }
+
+        return node;
+    }
 };
 
 #endif //ALGRITHM_NOTES_BST_H

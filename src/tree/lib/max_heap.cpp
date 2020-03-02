@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cassert>
 #include "../include/max_heap.h"
 #include "../../include/tools.h"
 
