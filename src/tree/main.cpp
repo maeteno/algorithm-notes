@@ -29,5 +29,7 @@ int main() {
     bst->insert(2, 4);
     bst->insert(6, 4);
 
-    cout << bst->size() << endl;
+    cout << *bst->search(2) << endl;
+
+    delete bst;
 }

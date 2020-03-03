@@ -49,6 +49,10 @@ public:
         root = insert(root, key, value);
     }
 
+    V *search(K key) {
+        return search(root, key);
+    }
+
 private:
     Node *insert(Node *node, K key, V value) {
         if (node == NULL) {
@@ -65,6 +69,20 @@ private:
         }
 
         return node;
+    }
+
+    V *search(Node *node, K key) {
+        if (node == NULL) {
+            return NULL;
+        }
+
+        if (node->key == key) {
+            return &(node->value);
+        } else if (key < node->key) {
+            return search(node->left, key);
+        } else {
+            return search(node->right, key);
+        }
     }
 };
 
