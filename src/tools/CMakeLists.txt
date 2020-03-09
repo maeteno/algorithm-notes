@@ -3,4 +3,4 @@
 AUX_SOURCE_DIRECTORY(. DIR_LIB_SRCS)
 
 # 生成链接库
-ADD_LIBRARY (tools_lib ${DIR_LIB_SRCS})
+ADD_LIBRARY(tools_lib ${DIR_LIB_SRCS})

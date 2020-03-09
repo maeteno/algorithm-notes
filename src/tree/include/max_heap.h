@@ -7,21 +7,29 @@
  * 1. 插入
  * 2. 获取
  */
-class MaxHeap{
+class MaxHeap {
 private:
-    int* data;
+    int *data;
     int count;
     int capacity;
+
     void shiftUp(int k);
+
     void shiftDown(int k);
 
 public:
     explicit MaxHeap(int capacity);
+
     ~MaxHeap();
+
     int size();
+
     void insert(int item);
+
     bool isEmpty();
+
     void print();
+
     int extractMax();
 };
 

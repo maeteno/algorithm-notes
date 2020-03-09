@@ -40,5 +40,5 @@ int main() {
     delete b;
     delete a;
 
-    return  0;
+    return 0;
 }

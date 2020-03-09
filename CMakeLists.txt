@@ -24,5 +24,11 @@ TARGET_LINK_LIBRARIES(sort sort_lib tools_lib) # 添加链接库
 
 # Tree
 ADD_SUBDIRECTORY(src/tree/lib)
-ADD_EXECUTABLE(tree src/tree/main.cpp)
-TARGET_LINK_LIBRARIES(tree tree_lib tools_lib)
+
+# maxH
+ADD_EXECUTABLE(mh src/tree/max_heap.cpp)
+TARGET_LINK_LIBRARIES(mh tree_lib tools_lib)
+
+# BST
+ADD_EXECUTABLE(bst src/tree/bst.cpp)
+TARGET_LINK_LIBRARIES(bst tree_lib tools_lib)
