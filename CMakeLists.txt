@@ -38,3 +38,6 @@ ADD_EXECUTABLE(avl src/tree/avl.cpp)
 TARGET_LINK_LIBRARIES(avl tree_lib tools_lib)
 
 ADD_EXECUTABLE(avl_demo src/tree/avl_demo.cpp)
+
+# dp
+ADD_SUBDIRECTORY(src/dp) # 添加子目录

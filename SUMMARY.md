@@ -14,4 +14,4 @@
     * [平衡二叉搜索树](notes/tree/avl.md)
     * [B树](notes/tree/b-tree.md)
     * [B+树](notes/tree/b-plus-tree.md)
-
+* [动态规划](notes/dp/README.md)
