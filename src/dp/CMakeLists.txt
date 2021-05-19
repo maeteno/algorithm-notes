@@ -3,4 +3,7 @@
 AUX_SOURCE_DIRECTORY(. DIR_LIB_SRCS)
 
 # 生成执行文件
-ADD_EXECUTABLE(match_str ${DIR_LIB_SRCS})
+ADD_EXECUTABLE(match_str match_str.c)
+
+# 生成执行文件
+ADD_EXECUTABLE(coin_change coin_change.c)
