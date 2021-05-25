@@ -11,44 +11,74 @@
 #include <string.h>
 #include "stdbool.h"
 
-bool matches(char *s, char *p, int sIndex, int pIndex);
+bool isMatch(char *s, char *p);
+
+bool matches(const char *s, const char *p, int sIndex, int pIndex);
+
+void test(char *s, char *p);
+
+int main() {
+    //test("aaab", "aa*b");
+    test("aaab", "aa*b");
+    //test("aaab", "a*b");
+}
 
 bool isMatch(char *s, char *p) {
     unsigned long sLen = strlen(s);
     unsigned long pLen = strlen(p);
 
-    bool dp[sLen + 1][pLen + 1];
-    dp[0][0] = true;
+    bool dp[sLen][pLen];
 
     for (int sIndex = 0; sIndex < sLen; sIndex++) {
-        for (int pIndex = 1; pIndex < pLen; pIndex++) {
-            if (p[pIndex - 1] == '*') {
-                dp[sIndex][pIndex] = dp[sIndex][pIndex - 2];
+        for (int pIndex = 0; pIndex < pLen; pIndex++) {
+            if (p[pIndex] == '*') {
                 if (matches(s, p, sIndex, pIndex - 1)) {
-                    dp[sIndex][pIndex] = dp[sIndex][pIndex] || dp[sIndex - 1][pIndex];
+                    dp[sIndex][pIndex] = dp[sIndex][pIndex - 1];
                 }
             } else {
-                if (matches(s, p, sIndex, pIndex)) {
+                if ((matches(s, p, sIndex, pIndex))) {
                     dp[sIndex][pIndex] = dp[sIndex - 1][pIndex - 1];
+
+                    if (sIndex == 0 || pIndex == 0) {
+                        dp[sIndex][pIndex] = true;
+                    }
+
                 }
             }
         }
+
+        for (int pIndex = 0; pIndex < pLen; pIndex++) {
+            printf("%s \t", dp[sIndex][pIndex] ? "true" : "false");
+        }
+
+        printf("\n%d,%c,%s\n\n ", sIndex, s[sIndex], p);
     }
 
-    return dp[sLen][pLen];
+    // aab -> a : 110
+    // aab -> * => aab -> a : 110
+    // aab -> b : 111
+
+
+//    for (int sIndex = 0; sIndex <= sLen; sIndex++) {
+//        for (int pIndex = 0; pIndex <= pLen; pIndex++) {
+//            printf("%s \t", dp[sIndex][pIndex] ? "true" : "false");
+//        }
+//        printf("\n");
+//    }
+
+    return dp[sLen - 1][pLen - 1];
 }
 
-bool matches(char *s, char *p, int sIndex, int pIndex) {
-    if (sIndex == 0) {
-        return false;
-    }
-    if (p[pIndex - 1] == '.') {
+bool matches(const char *s, const char *p, int sIndex, int pIndex) {
+    if (p[pIndex] == '.') {
         return true;
     }
-    return s[sIndex - 1] == p[pIndex - 1];
+
+    return s[sIndex] == p[pIndex];
 }
 
-int main() {
-    bool r = isMatch("aab", "aab");
-    printf("isMatch(\"aab\", \"aab\"): %d\n", r);
+void test(char *s, char *p) {
+    bool r = isMatch(s, p);
+    printf("%s <=> %s: %s\n", s, p, r ? "true" : "false");
+    printf("\n");
 }
