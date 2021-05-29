@@ -18,55 +18,49 @@ bool matches(const char *s, const char *p, int sIndex, int pIndex);
 void test(char *s, char *p);
 
 int main() {
-    //test("aaab", "aa*b");
-    test("aaab", "aa*b");
-    //test("aaab", "a*b");
+    //test("aaab", "aa*c*b");
+    test("a", "aa*c*b");
 }
 
 bool isMatch(char *s, char *p) {
     unsigned long sLen = strlen(s);
     unsigned long pLen = strlen(p);
 
-    bool dp[sLen][pLen];
+    bool dp[sLen + 1][pLen + 1];
 
     for (int sIndex = 0; sIndex < sLen; sIndex++) {
-        for (int pIndex = 0; pIndex < pLen; pIndex++) {
+        for (int pIndex = 1; pIndex < pLen; pIndex++) {
             if (p[pIndex] == '*') {
+                dp[sIndex][pIndex] = dp[sIndex][pIndex - 2];
+
                 if (matches(s, p, sIndex, pIndex - 1)) {
                     dp[sIndex][pIndex] = dp[sIndex][pIndex - 1];
                 }
             } else {
                 if ((matches(s, p, sIndex, pIndex))) {
-                    dp[sIndex][pIndex] = dp[sIndex - 1][pIndex - 1];
-
-                    if (sIndex == 0 || pIndex == 0) {
-                        dp[sIndex][pIndex] = true;
-                    }
-
+                    dp[sIndex][pIndex - 1] = dp[sIndex - 1][pIndex - 2];
+                } else{
+                    dp[sIndex][pIndex] = false;
                 }
             }
         }
 
+        printf("%d\n%c\n%s\n", sIndex, s[sIndex], p);
         for (int pIndex = 0; pIndex < pLen; pIndex++) {
             printf("%s \t", dp[sIndex][pIndex] ? "true" : "false");
         }
-
-        printf("\n%d,%c,%s\n\n ", sIndex, s[sIndex], p);
+        printf("\n");
     }
 
-    // aab -> a : 110
-    // aab -> * => aab -> a : 110
-    // aab -> b : 111
+    printf("\n");
+    for (int sIndex = 0; sIndex <= sLen; sIndex++) {
+        for (int pIndex = 0; pIndex <= pLen; pIndex++) {
+            printf("%s \t", dp[sIndex][pIndex] ? "true" : "false");
+        }
+        printf("\n");
+    }
 
-
-//    for (int sIndex = 0; sIndex <= sLen; sIndex++) {
-//        for (int pIndex = 0; pIndex <= pLen; pIndex++) {
-//            printf("%s \t", dp[sIndex][pIndex] ? "true" : "false");
-//        }
-//        printf("\n");
-//    }
-
-    return dp[sLen - 1][pLen - 1];
+    return dp[sLen][pLen];
 }
 
 bool matches(const char *s, const char *p, int sIndex, int pIndex) {
