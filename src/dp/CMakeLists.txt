@@ -11,3 +11,5 @@ ADD_EXECUTABLE(palindrome palindrome.c)
 
 # 生成执行文件
 ADD_EXECUTABLE(coin_change coin_change.c)
+
+ADD_EXECUTABLE(fib fib.c)
