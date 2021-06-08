@@ -41,3 +41,6 @@ ADD_EXECUTABLE(avl_demo src/tree/avl_demo.cpp)
 
 # dp
 ADD_SUBDIRECTORY(src/dp) # 添加子目录
+
+# leetcode
+ADD_SUBDIRECTORY(src/leetcode) # 添加子目录
