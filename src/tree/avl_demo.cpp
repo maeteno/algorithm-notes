@@ -1,5 +1,6 @@
-#include<stdio.h>
-#include<malloc.h>
+#include <cstdio>
+//#include <malloc.h>
+#include <sys/malloc.h>
 
 struct AVLNode {
     int value;
