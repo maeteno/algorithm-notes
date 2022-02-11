@@ -41,6 +41,8 @@ struct AVLNode *select(int value, AVLNode *root) {
         else
             return root;
     }
+
+    return nullptr;
 }
 
 void setBalance(AVLNode *a) {
@@ -185,6 +187,8 @@ struct AVLNode *getMin(AVLNode *a) {
         getMin(a->left);
     else
         return a;
+
+    return nullptr;
 }
 
 void delNodeIfHas2Child(AVLNode *a) {
