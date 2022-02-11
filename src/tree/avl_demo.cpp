@@ -1,6 +1,7 @@
 #include <cstdio>
-//#include <malloc.h>
 #include <sys/malloc.h>
+#include <cstdlib>
+//#include <malloc.h>
 
 struct AVLNode {
     int value;
@@ -53,7 +54,7 @@ void setBalance(AVLNode *a) {
 
 struct AVLNode *turnLeft(AVLNode *a) {
     AVLNode *b = a->right;
-    if (a->parent != 0) {
+    if (a->parent != nullptr) {
         if (a->parent->right == a) {
             a->parent->right = b;
         } else {
