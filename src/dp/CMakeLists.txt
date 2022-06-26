@@ -3,13 +3,12 @@
 AUX_SOURCE_DIRECTORY(. DIR_LIB_SRCS)
 
 # 生成执行文件
-ADD_EXECUTABLE(match-str match_str.c)
+ADD_EXECUTABLE(match-str.bin match_str.c)
 
-ADD_EXECUTABLE(match_str_2 match_str_2.c)
+ADD_EXECUTABLE(match_str_2.bin match_str_2.c)
 
-ADD_EXECUTABLE(palindrome palindrome.c)
+ADD_EXECUTABLE(palindrome.bin palindrome.c)
 
-# 生成执行文件
-ADD_EXECUTABLE(coin_change coin_change.c)
+ADD_EXECUTABLE(coin_change.bin coin_change.c)
 
-ADD_EXECUTABLE(fib fib.c)
+ADD_EXECUTABLE(fib.bin fib.c)

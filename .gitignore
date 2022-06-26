@@ -21,6 +21,5 @@ CMakeCache.txt
 *.cbp
 
 *.exe
+*.bin
 *.manifest
-
-./sort
