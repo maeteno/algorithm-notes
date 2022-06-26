@@ -2,10 +2,10 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.5.0)
 
 # 设置项目名称
-PROJECT(algrithm-notes)
+PROJECT(algorithm-notes)
 
 # 打印信息
-MESSAGE("config types: ${CMAKE_CONFIGRATION}")
+MESSAGE("config types: ${CMAKE_CONFIGURATION}")
 
 # 设置cpp支持的版本
 SET(CMAKE_CXX_STANDARD 11)

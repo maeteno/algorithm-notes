@@ -19,14 +19,14 @@ int height(AVLNode *a) {
     if (a == 0) {
         return 0;
     }
-    int rightheight = height(a->right);
-    int leftheight = height(a->left);
-    return rightheight > leftheight ? (rightheight + 1) : (leftheight + 1);
+    int rightHeight = height(a->right);
+    int leftHeight = height(a->left);
+    return rightHeight > leftHeight ? (rightHeight + 1) : (leftHeight + 1);
 }
 
 struct AVLNode *select(int value, AVLNode *root) {
-    if (root == 0) {
-        return 0;
+    if (root == nullptr) {
+        return nullptr;
     }
     if (root->value == value) {
         return root;
