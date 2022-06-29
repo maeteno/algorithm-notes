@@ -14,6 +14,8 @@ SET(CMAKE_CXX_STANDARD 11)
 # 并将名称保存到 DIR_SRCS 变量
 AUX_SOURCE_DIRECTORY(./src DIR_SRCS)
 
+ENABLE_TESTING()
+
 # Tools Lib
 ADD_SUBDIRECTORY(src/tools)
 
@@ -28,14 +30,17 @@ ADD_SUBDIRECTORY(src/tree/lib)
 # max_heap
 ADD_EXECUTABLE(mh.bin src/tree/max_heap.cpp)
 TARGET_LINK_LIBRARIES(mh.bin tree_lib tools_lib)
+ADD_TEST(NAME mh COMMAND mh.bin)
 
 # BST
 ADD_EXECUTABLE(bst.bin src/tree/bst.cpp)
 TARGET_LINK_LIBRARIES(bst.bin tree_lib tools_lib)
+ADD_TEST(NAME bst COMMAND bst.bin)
 
 # AVL
 ADD_EXECUTABLE(avl.bin src/tree/avl.cpp)
 TARGET_LINK_LIBRARIES(avl.bin tree_lib tools_lib)
+ADD_TEST(NAME avl COMMAND avl.bin)
 
 ADD_EXECUTABLE(avl_demo.bin src/tree/avl_demo.cpp)
 
