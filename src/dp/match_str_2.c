@@ -8,7 +8,7 @@
  * 所谓匹配，是要涵盖整个字符串s的，而不是部分字符串。
  */
 #include "stdio.h"
-#include <strings.h>
+#include "strlen.h"
 #include "stdbool.h"
 
 bool isMatch(char *s, char *p);

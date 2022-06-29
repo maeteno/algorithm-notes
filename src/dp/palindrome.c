@@ -4,18 +4,7 @@
  */
 #include <stdio.h>
 #include <stdbool.h>
-
-#ifdef _UNIX
-#include <libc.h>
-#endif
-
-#ifdef __WINDOWS_
-#include <string.h>
-#endif
-
-#ifdef linux
-#include <string.h>
-#endif
+#include "strlen.h"
 
 char *longestPalindrome(char *s) {
     unsigned long len = strlen(s);

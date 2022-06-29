@@ -9,6 +9,6 @@ ADD_EXECUTABLE(match_str_2.bin match_str_2.c)
 
 ADD_EXECUTABLE(palindrome.bin palindrome.c)
 
-ADD_EXECUTABLE(coin_change.bin coin_change.c)
+ADD_EXECUTABLE(coin_change.bin coin_change.c strlen.h)
 
 ADD_EXECUTABLE(fib.bin fib.c)

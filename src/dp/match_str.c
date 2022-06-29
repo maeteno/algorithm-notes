@@ -8,7 +8,7 @@
  * 所谓匹配，是要涵盖整个字符串s的，而不是部分字符串。
  */
 #include "stdio.h"
-#include <string.h>
+#include "strlen.h"
 #include "stdbool.h"
 
 bool isMatch(char *s, char *p);
@@ -39,7 +39,7 @@ bool isMatch(char *s, char *p) {
             } else {
                 if ((matches(s, p, sIndex, pIndex))) {
                     dp[sIndex][pIndex - 1] = dp[sIndex - 1][pIndex - 2];
-                } else{
+                } else {
                     dp[sIndex][pIndex] = false;
                 }
             }
