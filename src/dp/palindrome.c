@@ -3,8 +3,19 @@
  * 动态规划的思想是如何复用子问题的解
  */
 #include <stdio.h>
-#include <libc.h>
 #include <stdbool.h>
+
+#ifdef _UNIX
+#include <libc.h>
+#endif
+
+#ifdef __WINDOWS_
+#include <string.h>
+#endif
+
+#ifdef linux
+#include <string.h>
+#endif
 
 char *longestPalindrome(char *s) {
     unsigned long len = strlen(s);

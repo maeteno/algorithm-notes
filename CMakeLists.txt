@@ -19,8 +19,8 @@ ADD_SUBDIRECTORY(src/tools)
 
 # 排序
 ADD_SUBDIRECTORY(src/sort/lib) # 添加子目录
-ADD_EXECUTABLE(sort src/sort/main.cpp) # 指定生成目标
-TARGET_LINK_LIBRARIES(sort sort_lib tools_lib) # 添加链接库
+ADD_EXECUTABLE(sort.bin src/sort/main.cpp) # 指定生成目标
+TARGET_LINK_LIBRARIES(sort.bin sort_lib tools_lib) # 添加链接库
 
 # Tree
 ADD_SUBDIRECTORY(src/tree/lib)

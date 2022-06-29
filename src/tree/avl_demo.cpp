@@ -1,7 +1,12 @@
+#ifdef _UNIX
 #include <cstdio>
 #include <sys/malloc.h>
 #include <cstdlib>
-//#include <malloc.h>
+#endif
+
+#ifdef linux
+#include <malloc.h>
+#endif
 
 struct AVLNode {
     int value;
